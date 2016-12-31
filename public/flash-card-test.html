@@ -1,0 +1,32 @@
+﻿<div class="row margin-top-10">
+  <div class="row margin-bottom-10 bg-info text-center text-info" ng-show="areHintsAvailable">
+    {{currentHint}}
+  </div>
+  <div class="panel panel-primary well">
+    <div class="panel-heading " id="card_{{card.id}}">
+      <div class="panel-title text-center small ">
+        <b>Card {{card.id}}</b>
+      </div>
+      <div class="panel-body fixed-panel-test {{card.isFrontShown?'':'card_back_color'}} {{card.isFrontShown?'':'text-primary'}}">
+        <div class="tow card effect__click {{card.isFrontShown?'':'flipped'}}">
+          <div class="row text-center card__front">
+            <textarea ui-tinymce="tinymceOptionsReadOnly" ng-model="card.front"></textarea>
+          </div>
+          <div class="row text-center card__back">
+            <textarea ui-tinymce="tinymceOptionsReadOnly" ng-model="card.back"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="panel-footer " style="background-color:white">
+        <div class="row ">
+          <div class="col-sm-12 ">
+            <span class="text-primary pointer margin-left-10" ng-click="flip(card) " title="{{!card.isFrontShown?'Front':'Back'}}"><i ng-show="card.isFrontShown " class="fa fa-toggle-off fa-2x "></i>
+                                <i ng-show="!card.isFrontShown " class="fa fa-toggle-on fa-2x "></i></span>
+            <span class="text-primary pointer margin-left-10" ng-click="refresh() " title="New Card"><i class="fa fa-refresh fa-2x "></i></span>
+            <span class="text-primary pointer margin-left-10" ng-show="areHintsAvailable" ng-click="showHints() " title="Hints"><i class="fa fa-question-circle fa-2x "></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

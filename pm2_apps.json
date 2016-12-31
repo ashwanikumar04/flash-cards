@@ -1,0 +1,19 @@
+{
+	"apps": [{
+		"name": "flash cards",
+		"script": "app.js",
+		"instances": 0,
+		"exec_mode": "cluster",
+		"merge_logs": true,
+		"error_file": "logs/logs.log",
+		"out_file": "logs/logs.log",
+		"log_date_format": "YYYY-MM-DD HH:mm Z",
+		"node_args": [
+			"--max_old_space_size=500"
+		],
+		"env": {
+			"NODE_ENV": "production",
+			"PORT": "8091"
+		}
+	}]
+}

@@ -1,0 +1,65 @@
+<div id="previewDiv" style="overflow:auto" class="row panel panel-primary well">
+    <div class="card-error" flash-message="3000"></div>
+    <form ng-submit="addOrUpdate() ">
+        <div class="row ">
+            <div class="col-md-2 field  ">
+                <label>
+                                        Front
+                                      
+                                    </label>
+            </div>
+            <div class="col-md-10 field  ">
+                <textarea ui-tinymce="tinymceOptions" ng-model="currentCard.front"></textarea>
+            </div>
+        </div>
+        <div class="row margin-top-10">
+            <div class="col-md-2 field ">
+                <label>
+                                        Back
+                                      
+                                    </label>
+            </div>
+            <div class="col-md-10 field  ">
+                <textarea ui-tinymce="tinymceOptions" ng-model="currentCard.back"></textarea>
+            </div>
+        </div>
+        <div class="row margin-top-10">
+            <div class="col-md-2 field ">
+                <label>
+                                        Type
+                                      
+                                    </label>
+            </div>
+            <div class="col-md-10 field  ">
+                <select ng-model="currentCard.type" ngRequired="true">
+                                            <option  value="1">Vocab</option>
+                                            <option  value="2">Code</option>
+                                            
+                                        </select>
+            </div>
+        </div>
+        <div class="row margin-top-10">
+            <div class="col-md-2 field ">
+                <label>
+                                        Hints
+                                      
+                                    </label>
+            </div>
+            <div class="col-md-10 field  ">
+                <div ng-repeat="hint in currentCard.hints">
+                    <input type="text " placeholder="Hint " class="small" ng-model="hint.hint ">
+                    <span style="margin-left:10px; " class="text-primary pointer" ng-click="addHint() " title="Add Hint"><i class="fa fa-plus"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="row margin-top-10">
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="submit"></label>
+                <div class="col-md-8">
+                    <button type="submit" name="submit" class="btn btn-primary">Save</button>
+                    <a href="javascript:void(0)" ng-click="cancel()" name="cancel" class="btn btn-default">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

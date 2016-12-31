@@ -1,0 +1,49 @@
+﻿<div>
+    <p class="divider"></p>
+    <div class="container ">
+        <div class="row margin-bottom-10">
+            <a href="javascript:void(0)" ng-click="add()" class="pointer pull-right"><i class="fa fa-plus margin-right-5"></i>Add New Card</a>
+        </div>
+        <div class="row">
+            <div class="col-md-6" ng-repeat="card in cards">
+                <div class="panel panel-primary well">
+                    <div class="panel-heading " id="card_{{card.id}}">
+                        <div class="panel-title text-center small ">
+                            <b>Card {{card.id}}</b>
+                        </div>
+                        <div class="panel-body fixed-panel {{card.isFrontShown?'':'card_back_color'}} {{card.isFrontShown?'':'text-primary'}}">
+                            <div class="tow card effect__click {{card.isFrontShown?'':'flipped'}}">
+                                <div class="row text-center card__front">
+                                    <textarea ui-tinymce="tinymceOptionsReadOnly" ng-model="card.front"></textarea>
+                                </div>
+                                <div class="row text-center card__back">
+                                    <textarea ui-tinymce="tinymceOptionsReadOnly" ng-model="card.back"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer " style="background-color:white">
+                            <div class="row ">
+                                <div class="col-sm-12 ">
+                                    <span class="text-primary pointer margin-left-10" ng-click="flip(card) " title="{{!card.isFrontShown?'Front':'Back'}}"><i ng-show="card.isFrontShown " class="fa fa-toggle-off fa-2x "></i>
+                                <i ng-show="!card.isFrontShown " class="fa fa-toggle-on fa-2x "></i></span>
+                                    <span class="text-primary pointer margin-left-10" ng-click="edit(card) " title="Edit Card"><i class="fa fa-edit fa-2x "></i></span>
+                                    <span class="text-primary pointer margin-left-10" title="Delete" ng-click="delete(card)"><i class="fa fa-trash fa-2x "></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-7 col-md-offset-2 ">
+                <paging show-prev-next="true " show-first-last="true " text-next-class="glyphicon glyphicon-chevron-right
+                                " text-prev-class="glyphicon glyphicon-chevron-left " text-first-class="glyphicon glyphicon-backward "
+                    text-last-class="glyphicon glyphicon-forward " class="pointer " page="currentPage " page-size="pageSize "
+                    total="total " pg-href="{{pgHref}} " paging-action="pageContent(
+                                'Paging Clicked', page, pageSize, total) ">
+                </paging>
+            </div>
+        </div>
+    </div>
+</div>
