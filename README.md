@@ -4,6 +4,7 @@ This application provides a simple interface to create flash cards with hints.
 <!-- TOC -->
 
 - [Flash Cards](#flash-cards)
+    - [Demo](#demo)
     - [Setup](#setup)
         - [Install dependencies](#install-dependencies)
         - [Install knex](#install-knex)
@@ -14,7 +15,13 @@ This application provides a simple interface to create flash cards with hints.
 
 <!-- /TOC -->
 
-
+## Demo
+Check the running application [here](http://demo.ashwanik.in)
+Use following credentials
+```
+UserName: admin
+Password: demo
+```
 ## Setup
 
 ### Install dependencies
