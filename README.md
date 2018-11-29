@@ -20,7 +20,7 @@ Check the running application [here](http://demo.ashwanik.in)
 Use following credentials
 ```
 UserName: admin
-Password: demo
+Password: super_password
 ```
 ## Setup
 
