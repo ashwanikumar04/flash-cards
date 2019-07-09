@@ -34,6 +34,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    color: #000000 !important;
 }
 
 .card__front,
@@ -81,4 +82,14 @@
 
 .margin-top-10 {
     margin-top: 10px;
+}
+
+.card__front>textarea{
+    width: 100% !important;
+    height: 250px !important;
+}
+
+.card__back>textarea{
+    width: 100% !important;
+    height: 250px !important;
 }
