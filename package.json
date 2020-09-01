@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "async": "^2.1.4",
-    "base64url": "^2.0.0",
+    "base64url": "^3.0.1",
     "bluebird": "^3.1.1",
     "body-parser": "^1.12.4",
     "bookshelf": "^0.10.2",
